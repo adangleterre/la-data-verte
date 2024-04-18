@@ -9,8 +9,8 @@ function Header() {
 
     return (
         <header>
-            <div className="flex items-center max-w-screen-lg mx-auto py-6 justify-between">
-                <div className="w-9/12 text-2xl text-primary font-nunito fontbold"><a href="http://">La data verte</a></div>
+            <div className="flex items-center mx-auto py-6 justify-between">
+                <div className="w-9/12 text-2xl text-primary font-nunito"><a href="http://">La data verte</a></div>
                 <nav className="flex justify-end w-3/12">
                     <ul className="hidden md:flex md:items-center sm:gap-4">
                         <li className="hover:text-green-700">
