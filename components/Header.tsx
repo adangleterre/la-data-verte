@@ -13,13 +13,13 @@ function Header() {
                 <div className="w-9/12 text-2xl text-primary font-nunito"><a href="http://">La data verte</a></div>
                 <nav className="flex justify-end w-3/12">
                     <ul className="hidden md:flex md:items-center sm:gap-4">
-                        <li className="hover:text-green-700">
+                        <li className="hover:text-green-700 transition duration-300">
                             <a href="#">Joueurs</a>
                         </li>
-                        <li className="hover:text-green-700">
+                        <li className="hover:text-green-700 transition duration-300">
                             <a href="#">Classement</a>
                         </li>
-                        <li className="hover:text-green-700">
+                        <li className="hover:text-green-700 transition duration-300">
                             <a href="#">Statistiques</a>
                         </li>
                     </ul>
