@@ -1,23 +1,50 @@
+import Image from 'next/image'
 import React from 'react'
 
 function Hero() {
     return (
-        <div className="w-full py-20 mx-auto">
-                <div className="flex flex-col lg:flex-row gap-10 lg:items-center">
-                    <div className="flex gap-4 flex-col flex-1">
-                        <div className="flex gap-2 flex-col">
-                            <h2 className="text-xl sm:text-3xl md:text-5xl tracking-tighter lg:max-w-xl font-regular">
-                                Toutes les statistiques des verts sont ici
-                            </h2>
-                            <p className="text-md max-w-xl lg:max-w-md leading-relaxed tracking-tight text-muted-foreground font-nunito">
-                                Explorez les chiffres actuels de l&apos;AS Saint-Étienne. Plongez au cœur des statistiques les plus récentes, des performances sur le terrain, et des données qui définissent le présent et l&apos;avenir du club. Découvrez les statistiques des joueurs, les analyses de matchs, et suivez en temps réel l&apos;évolution des performances qui forgent la légende de l&apos;ASSE.
-                            </p>
+        <div className="py-10">
+            <div className="mx-auto">
+                <div className="flex flex-col md:flex-row gap-8 items-center">
+                    <div className="flex gap-6 flex-col">
+                        <h1 className="text-5xl lg:text-7xl tracking-tight">
+                            Toutes les stats des verts sont ici !
+                        </h1>
+                        <p className="text-md leading-relaxed text-muted-foreground max-w-lg">
+                            Explorez les chiffres actuels de l&apos;AS Saint-Étienne. Plongez au cœur des statistiques les plus récentes, des performances sur le terrain, et des données qui définissent le présent et l&apos;avenir du club. Découvrez les statistiques des joueurs, les analyses de matchs, et suivez en temps réel l&apos;évolution des performances qui forgent la légende de l&apos;ASSE.
+                        </p>
+                    </div>
+                    <div className="grid grid-cols-2 gap-8">
+                        <div className="bg-green-200 rounded-md">
+                            <Image
+                                src="/players.png"
+                                width={500}
+                                height={500}
+                                alt="Les joueurs de saint-etienne en train de célébrer"
+                            />
+                        </div>
+                        <div className="bg-emerald-300 rounded-md row-span-2 flex items-end">
+                            <Image
+                                src="/stadium.png"
+                                width={500}
+                                height={500}
+                                alt="Le stade geoffroy-guichard, les sièges montrent les initiales du club"
+                                className='rounded-md'
+                            />
+                        </div>
+                        <div className="bg-lime-200 rounded-md">
+                            <Image
+                                src="/cardona.png"
+                                width={500}
+                                height={500}
+                                alt="Irvin Cardona célèbre un but"
+                            />
                         </div>
                     </div>
-                    <div className="bg-muted rounded-md w-full aspect-video h-full flex-1"></div>
                 </div>
+            </div>
         </div>
-    )
+    );
 }
 
 export default Hero
