@@ -1,5 +1,6 @@
 "use client"
 
+import Link from 'next/link';
 import { useState } from 'react';
 import { HiMenu } from "react-icons/hi";
 
@@ -10,17 +11,17 @@ function Header() {
     return (
         <header>
             <div className="flex items-center mx-auto py-6 justify-between">
-                <div className="w-9/12 text-2xl text-primary font-nunito"><a href="http://">La data verte</a></div>
+                <div className="w-9/12 text-2xl text-primary font-nunito"><Link href="/">La data verte</Link></div>
                 <nav className="flex justify-end w-3/12">
                     <ul className="hidden md:flex md:items-center sm:gap-4">
                         <li className="hover:text-green-700 transition duration-300">
                             <a href="#">Joueurs</a>
                         </li>
                         <li className="hover:text-green-700 transition duration-300">
-                            <a href="#">Classement</a>
+                            <Link href="/standing">Classement</Link>
                         </li>
                         <li className="hover:text-green-700 transition duration-300">
-                            <a href="#">Statistiques</a>
+                            <a href="#">Matchs</a>
                         </li>
                     </ul>
 
@@ -37,7 +38,7 @@ function Header() {
                             <a href="#">Joueurs</a>
                         </li>
                         <li className="hover:text-green-700">
-                            <a href="#">Classement</a>
+                            <Link href="/standing">Classement</Link>
                         </li>
                         <li className="hover:text-green-700">
                             <a href="#">Statistiques</a>

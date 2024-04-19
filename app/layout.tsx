@@ -17,6 +17,9 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "La data verte",
   description: "La mine de données sur l'AS Saint-etienne",
+  icons: {
+    icon: '/favicon.svg'
+  }
 };
 
 export default function RootLayout({

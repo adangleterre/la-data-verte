@@ -11,7 +11,7 @@ function Hero() {
                             Toutes les stats des verts sont ici !
                         </h1>
                         <p className="text-md leading-relaxed text-muted-foreground max-w-lg">
-                            Explorez les chiffres actuels de l&apos;AS Saint-Étienne. Plongez au cœur des statistiques les plus récentes, des performances sur le terrain, et des données qui définissent le présent et l&apos;avenir du club. Découvrez les statistiques des joueurs, les analyses de matchs, et suivez en temps réel l&apos;évolution des performances qui forgent la légende de l&apos;ASSE.
+                            Explorez les chiffres actuels de l&apos;AS Saint-Étienne. Plongez au cœur des statistiques les plus récentes, des performances sur le terrain, des données qui définissent le présent et l&apos;avenir du club. Découvrez les statistiques des joueurs, les analyses de matchs, et suivez en temps réel l&apos;évolution des performances qui forgent la légende de l&apos;ASSE.
                         </p>
                     </div>
                     <div className="grid grid-cols-2 gap-8">
