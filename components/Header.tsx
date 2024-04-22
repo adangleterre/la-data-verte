@@ -15,7 +15,7 @@ function Header() {
                 <nav className="flex justify-end w-3/12">
                     <ul className="hidden md:flex md:items-center sm:gap-4">
                         <li className="hover:text-green-700 transition duration-300">
-                            <a href="#">Joueurs</a>
+                            <Link href="/players">Joueurs</Link>
                         </li>
                         <li className="hover:text-green-700 transition duration-300">
                             <Link href="/standing">Classement</Link>
