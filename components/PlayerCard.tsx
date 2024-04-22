@@ -40,8 +40,8 @@ async function PlayerCard() {
     return (
         <>
             {playerInfos.map((player) => (
-                <Card key={player.id}>
-                    <CardHeader className="flex flex-row gap-3 items-center">
+                <Card key={player.id} className="min-w-20">
+                    <CardHeader className="flex gap-3 items-center text-center">
                         <Avatar>
                             <AvatarImage src={player.photo} alt={`photo de ${player.name}`} />
                         </Avatar>
@@ -52,7 +52,7 @@ async function PlayerCard() {
                             <CardDescription>{player.age} ans</CardDescription>
                         </div>
                     </CardHeader>
-                    <CardContent>
+                    <CardContent className="text-center">
                         <p># {player.number} | {player.position}</p>
                     </CardContent>
                 </Card>
