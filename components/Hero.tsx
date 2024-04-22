@@ -7,7 +7,7 @@ function Hero() {
             <div className="mx-auto">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                     <div className="flex gap-6 flex-col">
-                        <h1 className="text-5xl lg:text-7xl tracking-tight">
+                        <h1 className="text-5xl lg:text-7xl tracking-tight font-bold">
                             Toutes les stats des verts sont ici !
                         </h1>
                         <p className="text-md leading-relaxed text-muted-foreground max-w-lg">

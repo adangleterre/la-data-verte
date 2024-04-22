@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils"
-import { Nunito, Roboto } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
-const nunito = Nunito({
-  subsets: ["latin"],
-  weight: ["500", "600"],
-  variable: "--font-nunito"
-});
 const roboto = Roboto({
   subsets: ["latin"],
-  weight: ["700"],
+  weight: ["500", "700"],
   variable: "--font-roboto"
 });
 
@@ -29,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${roboto.className} ${nunito.className}`}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   );
 }

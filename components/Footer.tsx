@@ -10,7 +10,7 @@ function Footer() {
             <hr className="mb-12 h-px border-t-0 bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25" />
             <div className="flex gap-8 flex-col md:flex-row md:justify-between">
                 <div className="flex gap-6 flex-col md:w-4/12">
-                    <h2 className="text-2xl text-primary font-nunito">
+                    <h2 className="text-2xl text-primary">
                         La data verte
                     </h2>
                     <p className="text-md max-w-lg leading-relaxed tracking-tight">
