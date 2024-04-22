@@ -17,7 +17,9 @@ interface Player {
     id: number,
     name: string,
     age: number,
+    number: number,
     photo: string,
+    position: string,
 }
 
 async function getPlayersInfos(): Promise<Player[]> {
@@ -51,11 +53,8 @@ async function PlayerCard() {
                         </div>
                     </CardHeader>
                     <CardContent>
-                        <p>Card Content</p>
+                        <p># {player.number} | {player.position}</p>
                     </CardContent>
-                    <CardFooter>
-                        <p>Card Footer</p>
-                    </CardFooter>
                 </Card>
             ))}
         </>
