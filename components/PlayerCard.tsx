@@ -22,6 +22,10 @@ interface Player {
     position: string,
 }
 
+interface PlayerCardProps {
+    positionCategory: "Goalkeeper" | "Defender" | "Midfielder" | "Attacker";
+}
+
 async function getPlayersInfos(): Promise<Player[]> {
     const response = await fetch('https://asse-api-production.up.railway.app/players');
     if (!response.ok) {
@@ -34,12 +38,14 @@ async function getPlayersInfos(): Promise<Player[]> {
 }
 
 
-async function PlayerCard() {
+async function PlayerCard({ positionCategory }: PlayerCardProps) {
     let playerInfos = await getPlayersInfos();
+
+    const filteredPlayers = playerInfos.filter((player) => player.position === positionCategory);
 
     return (
         <>
-            {playerInfos.map((player) => (
+            {filteredPlayers.map((player) => (
                 <Card key={player.id} className="min-w-20">
                     <CardHeader className="flex gap-3 items-center text-center">
                         <Avatar>
