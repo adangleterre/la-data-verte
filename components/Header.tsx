@@ -10,12 +10,12 @@ function Header() {
 
     return (
         <header>
-            <div className="flex items-center mx-auto py-6 justify-between">
-                <div className="w-9/12 text-2xl text-primary font-nunito"><Link href="/">La data verte</Link></div>
+            <div className="flex items-center mx-auto py-6 justify-between font-bold">
+                <div className="w-9/12 text-2xl text-primary"><Link href="/">La data verte</Link></div>
                 <nav className="flex justify-end w-3/12">
                     <ul className="hidden md:flex md:items-center sm:gap-4">
                         <li className="hover:text-green-700 transition duration-300">
-                            <a href="#">Joueurs</a>
+                            <Link href="/players">Joueurs</Link>
                         </li>
                         <li className="hover:text-green-700 transition duration-300">
                             <Link href="/standing">Classement</Link>

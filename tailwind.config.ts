@@ -18,8 +18,7 @@ const config = {
       },
     },
     fontFamily: {
-      roboto: ["var(--font-roboto)"],
-      nunito: ["var(--font-nunito)"]
+      roboto: ["var(--font-roboto)"]
     },
     extend: {
       colors: {

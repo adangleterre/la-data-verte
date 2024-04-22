@@ -10,7 +10,7 @@ function Footer() {
             <hr className="mb-12 h-px border-t-0 bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25" />
             <div className="flex gap-8 flex-col md:flex-row md:justify-between">
                 <div className="flex gap-6 flex-col md:w-4/12">
-                    <h2 className="text-2xl text-primary font-nunito">
+                    <h2 className="text-2xl text-primary font-bold">
                         La data verte
                     </h2>
                     <p className="text-md max-w-lg leading-relaxed tracking-tight">
@@ -23,7 +23,7 @@ function Footer() {
                     </div>
                 </div>
                 <div className="flex flex-col gap-6 md:w-7/12">
-                    <div>Joueurs à suivre</div>
+                    <div className='font-bold'>Joueurs à suivre</div>
                     <div className='flex flex-row flex-wrap gap-4 justify-between text-muted-foreground text-sm leading-relaxed'>
                         <div className="flex flex-col w-full sm:w-auto">
                             <p>Loic perrin</p>
