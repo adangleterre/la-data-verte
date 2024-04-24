@@ -4,9 +4,9 @@ import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <main className="container">
+    <main>
       <Header/>
-      <section>
+      <section className="container">
         <Hero/>
       </section>
       <Footer/>

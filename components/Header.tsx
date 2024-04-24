@@ -9,7 +9,7 @@ function Header() {
     const [mobileMenu, setmobileMenu] = useState(false);
 
     return (
-        <header>
+        <header className='container'>
             <div className="flex items-center mx-auto py-6 justify-between font-bold">
                 <div className="w-9/12 text-2xl text-primary"><Link href="/">La data verte</Link></div>
                 <nav className="flex justify-end w-3/12">

@@ -6,7 +6,7 @@ import { BsEnvelope } from "react-icons/bs";
 
 function Footer() {
     return (
-        <div className="py-10 lg:py-20">
+        <footer className="py-10 lg:py-20 container">
             <hr className="mb-12 h-px border-t-0 bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25" />
             <div className="flex gap-8 flex-col md:flex-row md:justify-between">
                 <div className="flex gap-6 flex-col md:w-4/12">
@@ -44,7 +44,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-        </div>
+        </footer>
     );
 };
 
