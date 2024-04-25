@@ -35,7 +35,7 @@ function Header() {
                 <div className="md:hidden absolute top-16 right-0 bg-white shadow-md w-full">
                     <ul className="flex flex-col items-center p-4 gap-3">
                         <li>
-                            <a href="#">Joueurs</a>
+                            <a href="/players">Joueurs</a>
                         </li>
                         <li>
                             <Link href="/standing">Classement</Link>
