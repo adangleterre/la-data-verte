@@ -47,7 +47,7 @@ async function PlayerCard({ positionCategory }: PlayerCardProps) {
                 <Card key={player.id} className="min-w-20">
                     <CardHeader className="flex gap-3 items-center text-center">
                         <Avatar>
-                            <AvatarImage src={player.photo} alt={`photo de ${player.name}`} />
+                            <AvatarImage src={player.photo} alt={`${player.name}`} />
                         </Avatar>
                         <div className="flex flex-col">
                             <CardTitle>
