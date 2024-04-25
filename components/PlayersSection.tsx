@@ -1,12 +1,9 @@
-import PageTitle from "./PageTitle"
 import PlayerCard from "./PlayerCard"
 import { Separator } from "@/components/ui/separator"
 
 async function PlayersSection() {
     return (
         <div className="flex flex-col gap-20">
-            <PageTitle title="Effectif Ligue 2 BKT / 2023 - 2024
- "/>
             <div>
                 <p className="font-bold text-3xl mb-6">Gardiens</p>
                 <Separator className="mb-6"/>

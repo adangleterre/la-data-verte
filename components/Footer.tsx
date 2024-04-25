@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import React from 'react'
 import { BsTwitterX } from "react-icons/bs";
 import { BsFacebook } from "react-icons/bs";
 import { BsEnvelope } from "react-icons/bs";
