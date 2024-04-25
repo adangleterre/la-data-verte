@@ -62,5 +62,9 @@
 }
 
 a {
-  @apply text-green-950 hover:text-green-700 transition duration-300
+  @apply text-green-900 hover:text-green-700 transition duration-300
+}
+
+section {
+  @apply my-24
 }
