@@ -36,6 +36,9 @@ async function StatsSection() {
                 <Link href="/players" className="flex items-center gap-1">
                     Voir le groupe professionnel <GoArrowUpRight />
                 </Link>
+                <Link href="/fixtures" className="flex items-center gap-1">
+                    Voir le calendrier <GoArrowUpRight />
+                </Link>
             </div>
         </>
     )
