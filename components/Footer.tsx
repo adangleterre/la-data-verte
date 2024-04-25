@@ -17,9 +17,9 @@ function Footer() {
                         Projet personnel, développé par <a href="https://github.com/adangleterre">Antoine Dangleterre</a> et <a href="https://github.com/pchatard">Pierre Chatard</a>. Données fournies par l&apos;API <a href="https://api-sports.io/">api-sports</a>
                     </p>
                     <div className="flex flex-row gap-6 items-center">
-                        <Link href="#"><BsTwitterX size={24} className='hover:text-green-700 transition duration-300'/></Link>
-                        <Link href="#"><BsFacebook size={24} className='hover:text-green-700 transition duration-300'/></Link>
-                        <Link href="#"><BsEnvelope size={28} className='hover:text-green-700 transition duration-300'/></Link>
+                        <Link href="#"><BsTwitterX size={24} className='text-slate-900 hover:text-green-700 transition duration-300'/></Link>
+                        <Link href="#"><BsFacebook size={24} className='text-slate-900 hover:text-green-700 transition duration-300'/></Link>
+                        <Link href="#"><BsEnvelope size={28} className='text-slate-900 hover:text-green-700 transition duration-300'/></Link>
                     </div>
                 </div>
                 <div className="flex flex-col gap-6 md:w-7/12">
