@@ -1,4 +1,3 @@
-import React from 'react';
 import {
     Table,
     TableBody,
@@ -44,11 +43,11 @@ function getFormDots(form: string) {
 function getBackgroundColor(rank: number): string {
     switch (true) {
         case rank <= 2:
-            return 'bg-green-200';
+            return 'bg-green-100';
         case rank >= 3 && rank <= 5:
-            return 'bg-yellow-200';
+            return 'bg-yellow-100';
         case rank >= 17:
-            return 'bg-red-200';
+            return 'bg-red-100';
         default:
             return 'bg-white';
     }

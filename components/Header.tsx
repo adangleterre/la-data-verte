@@ -9,18 +9,18 @@ function Header() {
     const [mobileMenu, setmobileMenu] = useState(false);
 
     return (
-        <header>
+        <header className='container'>
             <div className="flex items-center mx-auto py-6 justify-between font-bold">
                 <div className="w-9/12 text-2xl text-primary"><Link href="/">La data verte</Link></div>
                 <nav className="flex justify-end w-3/12">
                     <ul className="hidden md:flex md:items-center sm:gap-4">
-                        <li className="hover:text-green-700 transition duration-300">
+                        <li>
                             <Link href="/players">Joueurs</Link>
                         </li>
-                        <li className="hover:text-green-700 transition duration-300">
+                        <li>
                             <Link href="/standing">Classement</Link>
                         </li>
-                        <li className="hover:text-green-700 transition duration-300">
+                        <li>
                             <a href="#">Matchs</a>
                         </li>
                     </ul>
@@ -34,13 +34,13 @@ function Header() {
             {mobileMenu && (
                 <div className="md:hidden absolute top-16 right-0 bg-white shadow-md w-full">
                     <ul className="flex flex-col items-center p-4 gap-3">
-                        <li className="hover:text-green-700">
-                            <a href="#">Joueurs</a>
+                        <li>
+                            <a href="/players">Joueurs</a>
                         </li>
-                        <li className="hover:text-green-700">
+                        <li>
                             <Link href="/standing">Classement</Link>
                         </li>
-                        <li className="hover:text-green-700">
+                        <li>
                             <a href="#">Statistiques</a>
                         </li>
                     </ul>
