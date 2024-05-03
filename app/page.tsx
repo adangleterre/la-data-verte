@@ -7,7 +7,6 @@ import StatsSection from "@/components/StatsSection";
 export default function Home() {
   return (
     <main>
-      <Header/>
       <section className="container">
         <Hero/>
       </section>
@@ -17,7 +16,6 @@ export default function Home() {
       <section className="container">
         <HonoursSection />
       </section>
-      <Footer/>
     </main>
   );
 }
