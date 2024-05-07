@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
 import StandingLegend from "@/components/StandingLegend";
 import StandingTable from "@/components/StandingTable";

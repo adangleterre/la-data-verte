@@ -1,6 +1,4 @@
 import FixturePreview from "@/components/FixturePreview";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import PageTitle from "@/components/PageTitle";
 
 export interface Fixture {
