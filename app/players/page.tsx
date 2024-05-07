@@ -7,7 +7,7 @@ export default function Players() {
     return (
         <main>
             <PageTitle title="Effectif Ligue 2 BKT | 2023 - 2024" />
-            <section className="container">
+            <section>
                 <PlayersSection />
             </section>
         </main>

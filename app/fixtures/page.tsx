@@ -47,7 +47,7 @@ export default async function Fixtures() {
   return (
     <main>
       <PageTitle title="Calendrier Ligue 2 BKT | 2023 - 2024" />
-      <section className="max-w-screen-md mx-auto container flex flex-col gap-8">
+      <section className="max-w-screen-md mx-auto flex flex-col gap-8">
         {fixtures.map((f) => (
           <FixturePreview key={f.id} fixture={f} />
         ))}

@@ -21,13 +21,16 @@ interface Team {
 }
 
 async function getStandingTeam(): Promise<Team[]> {
-    const response = await fetch('https://asse-api-production.up.railway.app/standings');
+    const response = await fetch('https://asse-api-production.up.railway.app/standings', {
+        cache: 'no-cache',
+    })
+    
     if(!response.ok) {
         throw new Error('Failed to fetch data')
     }
 
     const data = await response.json();
-    
+
     return data;
 }
 
