@@ -20,24 +20,41 @@ async function getStandingTeams(): Promise<Team[]> {
 }
 
 function getFormDots(form: string) {
+    const dotColor =  {
+        win: 'text-primary',
+        draw: 'text-slate-500',
+        loose: 'text-red-500',
+    }
+
     return form.split('').map((result, index) => (
         <GoDotFill
             key={index}
-            className={` ${result === 'W' ? 'text-primary' : result === 'D' ? 'text-slate-500' : 'text-red-500'} `}
+            className={{
+                W: dotColor.win,
+                D: dotColor.draw,
+                L: dotColor.loose,
+            }[result]}
         />
     ));
 }
 
 function getBackgroundColor(rank: number): string {
+    const rankColor =  {
+        promotion: 'bg-green-100',
+        playoffs: 'bg-yellow-100',
+        relegation: 'bg-red-100',
+        normalPosition: 'bg-white'
+    }
+
     switch (true) {
         case rank <= 2:
-            return 'bg-green-100';
+            return rankColor.promotion;
         case rank >= 3 && rank <= 5:
-            return 'bg-yellow-100';
+            return rankColor.playoffs;
         case rank >= 17:
-            return 'bg-red-100';
+            return rankColor.relegation;
         default:
-            return 'bg-white';
+            return rankColor.normalPosition;
     }
 }
 
