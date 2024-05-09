@@ -1,42 +1,14 @@
 import FixturePreview from "@/components/FixturePreview";
 import PageTitle from "@/components/PageTitle";
-
-export interface Fixture {
-  id: number;
-  date: string;
-  referee: string;
-  homeGoalsFullTime: number;
-  awayGoalsFullTime: number;
-  homeGoalsHalfTime: number;
-  awayGoalsHalfTime: number;
-  homeWinner: boolean;
-  awayWinner: boolean;
-  venue?: {
-    name: string;
-    city: string;
-  };
-  homeTeam: {
-    name: string;
-    logo: string;
-  };
-  awayTeam: {
-    name: string;
-    logo: string;
-  };
-}
+import { fixturesURL } from "@/config";
+import { Fixture } from "@/api/types";
+import { basicFetch } from "@/api/fetchFunctions";
 
 async function getFixtures(): Promise<Fixture[]> {
-  const response = await fetch(
-    "https://asse-api-production.up.railway.app/fixtures"
-  );
+  const fixturesEndpoint: string = fixturesURL;
+  const fixtures = await basicFetch<Fixture[]>(fixturesEndpoint)
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch data");
-  }
-
-  const data = await response.json();
-
-  return data;
+  return fixtures;
 }
 
 export default async function Fixtures() {

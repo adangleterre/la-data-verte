@@ -13,8 +13,8 @@ import Image from "next/image";
 import { GoDotFill } from "react-icons/go";
 
 async function getStandingTeams(): Promise<Team[]> {
-    const standingTeamsEndpoint: string = standingURL
-    const standingTeams = await basicFetch<Team[]>(standingTeamsEndpoint)
+    const standingTeamsEndpoint: string = standingURL;
+    const standingTeams = await basicFetch<Team[]>(standingTeamsEndpoint);
     
     return standingTeams;
 }
