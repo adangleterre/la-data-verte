@@ -1,3 +1,6 @@
+import { standingURL } from "@/config";
+import { basicFetch } from "@/api/fetchFunctions";
+import { Team } from "@/api/types";
 import {
     Table,
     TableBody,
@@ -9,29 +12,11 @@ import {
 import Image from "next/image";
 import { GoDotFill } from "react-icons/go";
 
-interface Team {
-    teamId: number;
-    rank: number;
-    points: number;
-    form: string;
-    team: {
-        name: string;
-        logo: string;
-    };
-}
-
-async function getStandingTeam(): Promise<Team[]> {
-    const response = await fetch('https://asse-api-production.up.railway.app/standings', {
-        cache: 'no-cache',
-    })
+async function getStandingTeams(): Promise<Team[]> {
+    const standingTeamsEndpoint: string = standingURL
+    const standingTeams = await basicFetch<Team[]>(standingTeamsEndpoint)
     
-    if(!response.ok) {
-        throw new Error('Failed to fetch data')
-    }
-
-    const data = await response.json();
-
-    return data;
+    return standingTeams;
 }
 
 function getFormDots(form: string) {
@@ -57,7 +42,7 @@ function getBackgroundColor(rank: number): string {
 }
 
 async function StandingTable() {
-    let standingTeams = await getStandingTeam();
+    const standingTeams  = await getStandingTeams();
     standingTeams.sort((a, b) => a.rank - b.rank);
 
     return (
