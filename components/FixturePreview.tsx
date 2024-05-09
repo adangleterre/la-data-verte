@@ -4,7 +4,6 @@ import {
   CardHeader,
   CardTitle,
   CardContent,
-  CardDescription,
 } from "./ui/card";
 import Image from "next/image";
 

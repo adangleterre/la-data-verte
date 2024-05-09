@@ -1,22 +1,14 @@
+import { basicFetch } from "@/api/fetchFunctions";
+import { Team } from "@/api/types";
+import { standingURL } from "@/config";
 import Link from "next/link";
 import { GoArrowUpRight } from "react-icons/go";
 
-interface Team {
-    teamId: number;
-    rank: number;
-    points: number;
-    form: string;
-}
-
 async function getStandingTeam(): Promise<Team[]> {
-    const response = await fetch('https://asse-api-production.up.railway.app/standings');
-    if (!response.ok) {
-        throw new Error('Failed to fetch data')
-    }
-
-    const data = await response.json();
-
-    return data;
+    const standingTeamsEndpoint: string = standingURL;
+    const standingTeams = await basicFetch<Team[]>(standingTeamsEndpoint);
+    
+    return standingTeams;
 }
 
 async function StatsSection() {

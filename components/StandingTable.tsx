@@ -1,3 +1,6 @@
+import { standingURL } from "@/config";
+import { basicFetch } from "@/api/fetchFunctions";
+import { Team } from "@/api/types";
 import {
     Table,
     TableBody,
@@ -9,52 +12,54 @@ import {
 import Image from "next/image";
 import { GoDotFill } from "react-icons/go";
 
-interface Team {
-    teamId: number;
-    rank: number;
-    points: number;
-    form: string;
-    team: {
-        name: string;
-        logo: string;
-    };
-}
-
-async function getStandingTeam(): Promise<Team[]> {
-    const response = await fetch('https://asse-api-production.up.railway.app/standings');
-    if(!response.ok) {
-        throw new Error('Failed to fetch data')
-    }
-
-    const data = await response.json();
+async function getStandingTeams(): Promise<Team[]> {
+    const standingTeamsEndpoint: string = standingURL;
+    const standingTeams = await basicFetch<Team[]>(standingTeamsEndpoint);
     
-    return data;
+    return standingTeams;
 }
 
 function getFormDots(form: string) {
+    const dotColor =  {
+        win: 'text-primary',
+        draw: 'text-slate-500',
+        loose: 'text-red-500',
+    }
+
     return form.split('').map((result, index) => (
         <GoDotFill
             key={index}
-            className={` ${result === 'W' ? 'text-primary' : result === 'D' ? 'text-slate-500' : 'text-red-500'} `}
+            className={{
+                W: dotColor.win,
+                D: dotColor.draw,
+                L: dotColor.loose,
+            }[result]}
         />
     ));
 }
 
 function getBackgroundColor(rank: number): string {
+    const rankColor =  {
+        promotion: 'bg-green-100',
+        playoffs: 'bg-yellow-100',
+        relegation: 'bg-red-100',
+        normalPosition: 'bg-white'
+    }
+
     switch (true) {
         case rank <= 2:
-            return 'bg-green-100';
+            return rankColor.promotion;
         case rank >= 3 && rank <= 5:
-            return 'bg-yellow-100';
+            return rankColor.playoffs;
         case rank >= 17:
-            return 'bg-red-100';
+            return rankColor.relegation;
         default:
-            return 'bg-white';
+            return rankColor.normalPosition;
     }
 }
 
 async function StandingTable() {
-    let standingTeams = await getStandingTeam();
+    const standingTeams  = await getStandingTeams();
     standingTeams.sort((a, b) => a.rank - b.rank);
 
     return (

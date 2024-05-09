@@ -66,5 +66,5 @@ a {
 }
 
 section {
-  @apply my-20 md:my-28
+  @apply my-20 md:my-28 container
 }

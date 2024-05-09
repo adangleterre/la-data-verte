@@ -1,5 +1,3 @@
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import HonoursSection from "@/components/HonoursSection";
 import StatsSection from "@/components/StatsSection";
@@ -7,17 +5,15 @@ import StatsSection from "@/components/StatsSection";
 export default function Home() {
   return (
     <main>
-      <Header/>
-      <section className="container">
+      <section>
         <Hero/>
       </section>
-      <section className="container">
+      <section>
         <StatsSection />
       </section>
-      <section className="container">
+      <section>
         <HonoursSection />
       </section>
-      <Footer/>
     </main>
   );
 }
