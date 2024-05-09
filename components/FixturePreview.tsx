@@ -1,4 +1,4 @@
-import type { Fixture } from "@/app/fixtures/page";
+import { Fixture } from "@/api/types";
 import {
   Card,
   CardHeader,
