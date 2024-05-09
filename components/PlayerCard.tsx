@@ -6,31 +6,19 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
-
-interface Player {
-  id: number;
-  name: string;
-  age: number;
-  number: number;
-  photo: string;
-  position: string;
-}
+import { basicFetch } from "@/api/fetchFunctions";
+import { playersURL } from "@/config";
+import { Player } from "@/api/types";
 
 interface PlayerCardProps {
   positionCategory: "Goalkeeper" | "Defender" | "Midfielder" | "Attacker";
 }
 
 async function getPlayersInfos(): Promise<Player[]> {
-  const response = await fetch(
-    "https://asse-api-production.up.railway.app/players"
-  );
-  if (!response.ok) {
-    throw new Error("Failed to fetch data");
-  }
+  const playersInfosEndpoint: string = playersURL;
+  const playerInfos = await basicFetch<Player[]>(playersInfosEndpoint);
 
-  const data = await response.json();
-
-  return data;
+  return playerInfos;
 }
 
 async function PlayerCard({ positionCategory }: PlayerCardProps) {
