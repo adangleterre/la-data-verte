@@ -9,7 +9,7 @@ export type Team = {
     };
 }
 
-export interface Fixture {
+export type Fixture = {
     id: number;
     date: string;
     referee: string;
@@ -33,7 +33,7 @@ export interface Fixture {
     };
 }
 
-interface Player {
+export type Player = {
     id: number;
     name: string;
     age: number;
